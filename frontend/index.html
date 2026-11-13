@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Space Debris Tracker</title>
+
+    <meta
+        name="description"
+        content="3D Space Debris Tracking and Collision Risk Visualization"
+    />
+</head>
+
+<body>
+
+    <!-- Three.js will render the 3D Earth here -->
+    <div id="app"></div>
+    <button id="speedButton">
+    Speed: 1×
+</button>
+<div id="collisionPanel">
+    <div class="panel-header">
+        <span>COLLISION RISK MONITOR</span>
+        <button id="refreshCollisions">↻</button>
+    </div>
+
+    <div id="collisionStatus">
+        Analyzing orbital close approaches...
+    </div>
+
+    <div class="risk-summary">
+        <div>
+            <span>CRITICAL</span>
+            <strong id="criticalCount">0</strong>
+        </div>
+
+        <div>
+            <span>HIGH</span>
+            <strong id="highCount">0</strong>
+        </div>
+
+        <div>
+            <span>MEDIUM</span>
+            <strong id="mediumCount">0</strong>
+        </div>
+
+        <div>
+            <span>LOW</span>
+            <strong id="lowCount">0</strong>
+        </div>
+    </div>
+
+    <div class="collision-info">
+        <div>
+            Objects analyzed:
+            <strong id="objectsAnalyzed">-</strong>
+        </div>
+
+        <div>
+            Screening threshold:
+            <strong id="thresholdValue">-</strong>
+        </div>
+
+        <div>
+            Close approaches:
+            <strong id="approachCount">-</strong>
+        </div>
+    </div>
+
+    <div id="collisionEvents">
+        No close approaches detected.
+    </div>
+    <div id="locationInfo">
+    Location: —
+</div>
+</div>
+    <!-- Main JavaScript -->
+    <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>
